@@ -13,7 +13,8 @@ public class RemoveDuplicate {
         Arrays.sort(arr);
         for (int i = 0; i < n - 1; i++) {
             if (arr[i] != arr[i + 1]) {
-                res[j++] = arr[i];
+                res[j] = arr[i];
+                j++;
             }
         }
         res[j++] = arr[n - 1];
@@ -27,7 +28,8 @@ public class RemoveDuplicate {
         int j=0;
         for (int i = 0; i < arr.length - 1; i++){
             if (arr[i]!=arr[i+1]){
-                arr[j++] = arr[i];
+                arr[j] = arr[i];
+                j++;
             }
         }
         arr[j++] = arr[arr.length-1];
