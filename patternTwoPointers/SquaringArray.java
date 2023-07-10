@@ -11,10 +11,9 @@ public class SquaringArray {
         return arr;
     }
 
-
     public static int[] sortedSquaresByTwoPointer(int[] arr) {
         int square[] = new int[arr.length];
-        int i = arr.length -1;
+        int i = arr.length - 1;
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
@@ -28,7 +27,6 @@ public class SquaringArray {
             i--;
         }
         return square;
-
     }
 
     public static void main(String[] args) {
@@ -37,7 +35,5 @@ public class SquaringArray {
 
         int result[] = SquaringArray.sortedSquaresByTwoPointer(new int[]{8, 2, 5, 9, 11});
         System.out.print(Arrays.toString(result));
-
-
     }
 }
