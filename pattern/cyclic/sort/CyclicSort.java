@@ -6,7 +6,7 @@ public class CyclicSort {
     public static void cyclicSort(int[] arr) {
         int i = 0;
         while (i < arr.length) {
-            if(i != arr[i]-1){
+            if( i != arr[i]-1){   // arr[i] != i+1;
                 int index= arr[i]-1;
                 int x = arr[i];
                 arr[i] = arr[index];
