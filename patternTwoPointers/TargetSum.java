@@ -34,8 +34,8 @@ public class TargetSum {
         int target =6;
         byBruteForce(arr,target);
 
+        System.out.println(Arrays.toString(TargetSum.byTwoPointerApproach(arr,target)));
         System.out.println(Arrays.toString(byTwoPointerApproach(arr,target)));
-
 
         int result[] = TargetSum.byTwoPointerApproach( new int[] {2,5,9,11},11);
         System.out.print(Arrays.toString(result));
