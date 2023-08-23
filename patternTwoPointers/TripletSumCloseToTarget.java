@@ -15,26 +15,30 @@ public class TripletSumCloseToTarget {
           }
       }
     }
+
+        public static int threeSumClosest(int[] nums, int target) {
+            int sum = 0;
+
+            for(int i = 0; i < nums.length -2; i++){
+                for(int j = i + 1; j < nums.length-1; j++){
+                    for(int k = j + 1; k < nums.length; k++) {
+                        if (Math.abs(target -sum)>(target-(nums[i] + nums[j] + nums[k])))
+                            sum = (nums[i] + nums[j] + nums[k]);
+                    }
+                }
+            }
+            return sum;
+        }
     public static void main(String[] args){
         int[] arr = {-2,0,1,2};
         int targetSum = 2;
 
         sumCloseToTargetByBruteForce(arr,targetSum);
 
-        sumCloseToTargetByBruteForce(new int[]{-3, -1, 1, 2},1);
-    }
+        sumCloseToTargetByBruteForce(new int[]{-1,2,1,-4},1);
 
-    @Override
-    public String toString(){
-        return "";
-    }
-    @Override
-    public int hashCode(){
-        return 0;
-    }
+        System.out.println(threeSumClosest(new int[]{-1,2,1,-4} ,1));
 
-    @Override
-    public boolean equals(Object obj){
-        return true;
+
     }
 }
